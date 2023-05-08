@@ -1,0 +1,128 @@
+/*
+
+Author: Rene
+Theme: Food Admin
+Version 1.0
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+.menu {
+  border-bottom: 1px solid lightgray;
+}
+
+.wrapper {
+  padding: 1%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* CSS for Footer */
+
+.footer {
+  background: #ff4757;
+  color: white;
+}
+
+/* CSS for menu*/
+
+.menu ul {
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff6b81;
+  margin-left: 25px;
+}
+
+/* CSS for main content */
+
+.main-content {
+  background: rgb(237, 237, 237);
+  padding: 3% 0;
+}
+
+.col-4 {
+  width: 20%;
+  margin: 1%;
+  background: white;
+  padding: 2%;
+  display: inline-block;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+.tbl-full {
+  width: 100%;
+}
+
+table tr th {
+  border-bottom: 1px solid lightgray;
+  padding: 1%;
+  text-align: left;
+}
+
+table tr td {
+  padding: 1%;
+}
+
+.btn-primary {
+  background: #1e90ff;
+  padding: 1%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background: #4ea6ff;
+}
+
+.btn-secondary {
+  background: #1e90ff;
+  padding: 1%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background: #4ea6ff;
+}
+
+.btn-danger {
+  background: #ff471e;
+  padding: 1%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-danger:hover {
+  background: #ff6846;
+}
+
+.tbl-30 {
+  width: 30%;
+}
