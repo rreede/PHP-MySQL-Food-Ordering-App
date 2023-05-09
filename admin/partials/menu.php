@@ -1,3 +1,6 @@
+<?php include("../config/constants.php"); ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,6 @@
     <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
-
 <!-- Menu Section -->
 <div class="menu text-center">
 
