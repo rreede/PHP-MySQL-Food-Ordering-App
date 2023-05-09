@@ -27,10 +27,46 @@ if(isset($_SESSION["add"])) {
         <th>Username</th>
         <th>Actions</th>
     </tr>
-    <tr>
-        <td>1. </td>
-        <td>Rene Doe</td>
-        <td>ReneDoe</td>
+
+    <?php
+
+// DISPLAY DATA
+
+    // Query to get all admins
+
+    $sql = "SELECT * FROM tbl_admin";
+// Execute query
+$res = mysqli_query($conn, $sql);
+
+// Check is query is executed
+
+if($res==TRUE) {
+    
+    // Count rows to check whetever we have data in database or not
+    $count = mysqli_num_rows($res); // function to get all rows in database
+
+    $sn = 1;
+
+    //check the num of rows
+if($count>0) {
+    // We have data in database
+    while($rows=mysqli_fetch_assoc($res)) {
+        // Using while loop to get data from database
+        // While loop will run as lon as there is data in database
+
+        // Get individual data
+
+        $id=$rows["id"];
+        $full_name=$rows["full_name"];
+        $username=$rows["username"];
+
+        // Display the values in our table
+        	?>
+
+<tr>
+        <td><?php echo $sn++; ?></td>
+        <td><?php echo $full_name; ?></td>
+        <td><?php echo $username; ?></td>
         <td>
 
         <a href="#" class="btn-secondary">Update Admin</a>
@@ -39,27 +75,27 @@ if(isset($_SESSION["add"])) {
         </td>
     </tr>
 
-    <tr>
-        <td>1. </td>
-        <td>Rene Doe</td>
-        <td>ReneDoe</td>
-        <td>
+            <?php
 
-        <a href="#" class="btn-secondary">Update Admin</a>
-        <a href="#" class="btn-danger">Delete Admin</a>
-        </td>
-    </tr>
 
-    <tr>
-        <td>1. </td>
-        <td>Rene Doe</td>
-        <td>ReneDoe</td>
-        <td>
+    }
 
-        <a href="#" class="btn-secondary">Update Admin</a>
-        <a href="#" class="btn-danger">Delete Admin</a>
-        </td>
-    </tr>
+
+} else {
+    // We do not have data in database
+
+
+}
+
+
+} else {
+    echo "Select not executed";
+}
+
+
+
+?>
+
 
     
 </table>
