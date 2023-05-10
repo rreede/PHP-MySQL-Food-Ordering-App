@@ -14,18 +14,21 @@ if(isset($_SESSION["add"])) {
     unset($_SESSION["add"]); // Removing session
 }
 
-<br/>
-<br/>
 
 if(isset($_SESSION["delete"])) {
     echo $_SESSION["delete"];// Displaying Session
     unset($_SESSION["delete"]); // Removing session
 }
 
-<br/>
-<br/>
+if(isset($_SESSION["update"])) {
+    echo $_SESSION["update"];// Displaying Session
+    unset($_SESSION["update"]); // Removing session
+}
+
 
 ?>
+
+<br/>
 <!-- Button to add admin -->
 <a href="add-admin.php" class="btn-primary">Add Admin</a>
 
@@ -81,7 +84,7 @@ if($count>0) {
         <td><?php echo $username; ?></td>
         <td>
 
-        <a href="#" class="btn-secondary">Update Admin</a>
+        <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id; ?>" " class="btn-secondary">Update Admin</a>
         <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Admin</a>
             
         </td>
