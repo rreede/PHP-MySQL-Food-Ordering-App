@@ -126,3 +126,14 @@ table tr td {
 .tbl-30 {
   width: 30%;
 }
+
+/* CSS for login */
+
+.login {
+  width: 500px;
+  padding: 50px;
+  text-align: center;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 5% auto;
+}

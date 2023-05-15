@@ -25,6 +25,34 @@ if(isset($_SESSION["update"])) {
     unset($_SESSION["update"]); // Removing session
 }
 
+if(isset($_SESSION["user-not-found"])) {
+    echo $_SESSION["user-not-found"];// Displaying Session
+    unset($_SESSION["user-not-found"]); // Removing session
+}
+
+
+
+if(isset($_SESSION["pwd-not-match"])) {
+    echo $_SESSION["pwd-not-match"];// Displaying Session
+    unset($_SESSION["pwd-not-match"]); // Removing session
+}
+
+if(isset($_SESSION["change-pwd"])) {
+    echo $_SESSION["change-pwd"];// Displaying Session
+    unset($_SESSION["change-pwd"]); // Removing session
+}
+
+
+if(isset($_SESSION["login"])) {
+    echo $_SESSION["login"];// Displaying Session
+    unset($_SESSION["login"]); // Removing session
+}
+
+if(isset($_SESSION["add"])) {
+    echo $_SESSION["add"];
+    unset($_SESSION["add"]); // Removing session
+}
+
 
 ?>
 
@@ -84,7 +112,10 @@ if($count>0) {
         <td><?php echo $username; ?></td>
         <td>
 
-        <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id; ?>" " class="btn-secondary">Update Admin</a>
+        <a href="<?php echo SITEURL;?>admin/update-password.php?id=<?php echo $id; ?>" class="btn-secondary">Change Password</a>
+
+        <a href="<?php echo SITEURL;?>admin/update-admin.php?id=<?php echo $id; ?>" class="btn-secondary">Update Admin</a>
+
         <a href="<?php echo SITEURL;?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn-danger">Delete Admin</a>
             
         </td>
@@ -119,3 +150,9 @@ if($count>0) {
 </div>
 
 <?php include("partials/footer.php") ?>
+
+
+<?php
+
+
+?>

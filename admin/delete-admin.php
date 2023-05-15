@@ -3,6 +3,9 @@
 <?php
 
 
+if(isset($_SESSION['user'])) { // Check whether user session is set before deleteing users
+
+
 
 // 1. Get the id of admin to delete
 
@@ -33,6 +36,8 @@ header("location:".SITEURL.'admin/manage-admin.php');
      $_SESSION["delete"]="Failed to Delete Admin. Try Again Later.";
 }
 
+
+}
 
 // 3. Redirect to manage admin page with message (success/error)
 /*
